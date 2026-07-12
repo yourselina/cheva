@@ -2,7 +2,7 @@
 Start-Sleep -Seconds 15
 
 # 1. Download wallpaper
-$imageUrl = "https://github.com/Mafin111/MafinREP111/raw/refs/heads/main/photo.jpg"
+$imageUrl = "https://github.com/yourselina/cheva/raw/refs/heads/main/photo.jpg"
 $imagePath = "C:\Users\Public\wallpaper.jpg"
 
 try {
